@@ -1,0 +1,27 @@
+.option {
+  &__body {
+    display: none;
+    margin-bottom: 60px;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__options {
+    font-style: italic;
+  }
+
+  &__argument {
+    margin-bottom: 10px;
+  }
+
+  &__control {
+    color: $primary;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

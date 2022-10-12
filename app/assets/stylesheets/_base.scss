@@ -1,0 +1,75 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $primary-font-family;
+  color: $gray;
+}
+
+main {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: space-between;
+  max-width: $max-width;
+  margin: 0 auto 60px;
+
+  @media (max-width: $break-main) {
+    display: block;
+  }
+}
+
+h1 {
+  margin: 0 0 40px;
+  font-family: $secondary-font-family;
+  font-weight: bold;
+  font-weight: 900;
+}
+
+h2 {
+  margin: 0 0 6px;
+}
+
+h3 {
+  margin: 0 0 20px;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  font-size: 17px;
+  line-height: 28px;
+  margin: 0 0 16px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+pre {
+  font-size: 16px;
+  border: solid 5px $light-gray;
+  padding: 10px;
+  margin: 0;
+  min-width: 0;
+}
+
+code,
+.hljs {
+  font-family: 'Overpass Mono';
+  padding: 14px 20px;
+  background: $light-gray;
+}
+
+.emoji {
+  font-size: 24px;
+  vertical-align: text-top;
+}
