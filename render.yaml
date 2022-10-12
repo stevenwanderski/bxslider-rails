@@ -1,6 +1,6 @@
 services:
   - type: web
-    plans: free
+    plan: free
     name: bxslider-rails
     env: ruby
     buildCommand: "./bin/render-build.sh"
