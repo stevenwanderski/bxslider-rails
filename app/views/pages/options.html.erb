@@ -1,0 +1,22 @@
+<h1>Options</h1>
+
+<% @data.each do |item| %>
+  <% if item['group'] == 'Callbacks' %>
+    <%= render 'pages/options/option_group_with_arguments', item: item %>
+  <% elsif item['group'] == 'Public Methods' %>
+    <%= render 'pages/options/option_group_with_name_descriptions', item: item %>
+  <% else %>
+    <%= render 'pages/options/option_group_with_default', item: item %>
+  <% end %>
+<% end %>
+
+<script>
+  $(function(){
+    $('.option__body').first().show();
+
+    $('.option__control').on('click', function(e){
+      e.preventDefault();
+      $(this).parent().next('.option__body').toggle();
+    });
+  });
+</script>

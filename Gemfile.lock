@@ -66,21 +66,16 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    awesome_print (1.9.2)
     builder (3.2.4)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
-    debug (1.6.2)
-      irb (>= 1.3.6)
-      reline (>= 0.3.1)
     erubi (1.11.0)
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    io-console (0.5.11)
-    irb (1.4.2)
-      reline (>= 0.3.0)
     loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -136,8 +131,6 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
-    reline (0.3.1)
-      io-console (~> 0.5)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -170,7 +163,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  debug
+  awesome_print
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
   sass-rails

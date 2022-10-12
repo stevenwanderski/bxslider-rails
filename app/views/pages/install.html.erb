@@ -141,3 +141,19 @@ HTML
   </div>
 
 </div>
+
+<script>
+  $(function(){
+    $('.tour__step-title').on('click', function(){
+      var $sibling = $(this).next('.tour__step-body');
+      $('.tour__step-body').not($sibling).hide();
+      $sibling.toggle();
+    });
+
+    $(document).on('click', function(e){
+      if (!$(e.target).is('.tour__step-title')) {
+        $('.tour__step-body').hide();
+      }
+    });
+  });
+</script>

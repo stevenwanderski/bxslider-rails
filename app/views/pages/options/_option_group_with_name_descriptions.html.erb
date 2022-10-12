@@ -1,0 +1,22 @@
+<h2><a href="" class="option__control">+ <%= item['group'] %></a></h2>
+
+<div class="option__body">
+  <table cellspacing=0 cellpadding=0>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% item['items'].each do |item| %>
+        <tr>
+          <td>
+            <div class="option__name"><%= item['name'] %></div>
+          </td>
+          <td><%= item['description'] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
