@@ -64,83 +64,87 @@ npm = <<-HTML
 HTML
 %>
 
-<div class="install__block">
-  <div class="install__header">🤗 The Easy Way</div>
+<div class="content">
+  <div class="install__block">
+    <div class="install__header">🤗 The Easy Way</div>
+
+    <div class="install__block">
+      <p><span class="emoji">✨</span> Click the numbers to learn about each section.</p>
+      <div class="tour">
+        <pre><code class="html"><%= full_html %></code></pre>
+
+        <div class="tour__step tour__step--one">
+          <div class="tour__step-title">1</div>
+          <div class="tour__step-body">
+            <h3>Include the bxSlider files</h3>
+            <p>This code adds the required files to the webpage. These files need to be included before initializing the slider.</p>
+          </div>
+        </div>
+
+        <div class="tour__step tour__step--two">
+          <div class="tour__step-title">2</div>
+          <div class="tour__step-body">
+            <h3>Initialize the bxSlider plugin</h3>
+            <p>This code tells the webpage to start the slider setup. Without this code the slider plugin would not be visible on the page.</p>
+          </div>
+        </div>
+
+        <div class="tour__step tour__step--three">
+          <div class="tour__step-title">3</div>
+          <div class="tour__step-body">
+            <h3>Create the HTML for the slider</h3>
+            <p>This is the code that the slider plugin will use to generate the slides.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="install__block">
-    <p><span class="emoji">✨</span> Click the numbers to learn about each section.</p>
-    <div class="tour">
-      <pre><code class="html"><%= full_html %></code></pre>
+    <div class="install__header">🤔 The Other Ways</div>
 
-      <div class="tour__step tour__step--one">
-        <div class="tour__step-title">1</div>
-        <div class="tour__step-body">
-          <h3>Include the bxSlider files</h3>
-          <p>This code adds the required files to the webpage. These files need to be included before initializing the slider.</p>
-        </div>
+    <div class="install__method">
+      <h3>Manual</h3>
+      <div class="install__method-block">
+        <p>1. <a href="https://github.com/stevenwanderski/bxslider-4/archive/v4.2.12.zip">Download jquery.bxslider.zip here</a></p>
       </div>
 
-      <div class="tour__step tour__step--two">
-        <div class="tour__step-title">2</div>
-        <div class="tour__step-body">
-          <h3>Initialize the bxSlider plugin</h3>
-          <p>This code tells the webpage to start the slider setup. Without this code the slider plugin would not be visible on the page.</p>
-        </div>
-      </div>
-
-      <div class="tour__step tour__step--three">
-        <div class="tour__step-title">3</div>
-        <div class="tour__step-body">
-          <h3>Create the HTML for the slider</h3>
-          <p>This is the code that the slider plugin will use to generate the slides.</p>
-        </div>
+      <div class="install__method-block">
+        <p>2. Include in your webpage</p>
+        <pre><code class="html"><%= manual %><%= js %></code></pre>
       </div>
     </div>
+
+    <div class="install__method">
+      <h3>Bower</h3>
+      <div class="install__method-block">
+        <p>1. Run from a command line</p>
+        <pre><code class="bash">bower install bxslider --save</code></pre>
+      </div>
+
+      <div class="install__method-block">
+        <p>2. Include in your webpage</p>
+        <pre><code class="html"><%= bower %><%= js %></code></pre>
+      </div>
+    </div>
+
+    <div class="install__method">
+      <h3>NPM</h3>
+      <div class="install__method-block">
+        <p>1. Run from a command line</p>
+        <pre><code class="bash">npm install bxslider --save</code></pre>
+      </div>
+
+      <div class="install__method-block">
+        <p>2. Include in your webpage</p>
+        <pre><code class="html"><%= npm %><%= js %></code></pre>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<div class="install__block">
-  <div class="install__header">🤔 The Other Ways</div>
-
-  <div class="install__method">
-    <h3>Manual</h3>
-    <div class="install__method-block">
-      <p>1. <a href="https://github.com/stevenwanderski/bxslider-4/archive/v4.2.12.zip">Download jquery.bxslider.zip here</a></p>
-    </div>
-
-    <div class="install__method-block">
-      <p>2. Include in your webpage</p>
-      <pre><code class="html"><%= manual %><%= js %></code></pre>
-    </div>
-  </div>
-
-  <div class="install__method">
-    <h3>Bower</h3>
-    <div class="install__method-block">
-      <p>1. Run from a command line</p>
-      <pre><code class="bash">bower install bxslider --save</code></pre>
-    </div>
-
-    <div class="install__method-block">
-      <p>2. Include in your webpage</p>
-      <pre><code class="html"><%= bower %><%= js %></code></pre>
-    </div>
-  </div>
-
-  <div class="install__method">
-    <h3>NPM</h3>
-    <div class="install__method-block">
-      <p>1. Run from a command line</p>
-      <pre><code class="bash">npm install bxslider --save</code></pre>
-    </div>
-
-    <div class="install__method-block">
-      <p>2. Include in your webpage</p>
-      <pre><code class="html"><%= npm %><%= js %></code></pre>
-    </div>
-  </div>
-
-</div>
+<%= render 'layouts/sidebar' %>
 
 <script>
   $(function(){

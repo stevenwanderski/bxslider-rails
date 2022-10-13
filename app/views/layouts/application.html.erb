@@ -12,24 +12,12 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.9.0/styles/github-gist.min.css">
-    <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script src="/assets/js/app.js"></script>
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
-
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-    <script>
-      window.googletag = window.googletag || {cmd: []};
-      googletag.cmd.push(function() {
-        googletag.defineSlot('/7346874/Hellobar-adunits/7284', [1, 1], 'div-gpt-ad-1573778081531-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-      });
-    </script>
-
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -38,84 +26,15 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__inner">
-        <div class="header__logo">
-          <a href="/">
-            <strong>bx</strong>Slider
-          </a>
-        </div>
-        <nav class="nav">
-          <a href="/examples" class="nav__link">Examples</a>
-          <a href="/options" class="nav__link">Options</a>
-          <a href="https://github.com/stevenwanderski/bxslider-4" class="nav__link" target="_blank">Github</a>
-          <a href="/install" class="nav__link nav__button button">Install</a>
-        </nav>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
 
     <main>
-      <div class="content">
-        <%= yield %>
-      </div>
+      <%= yield %>
     </main>
 
-    <div class="personal">
-      <div class="personal__inner">
-        <div class="personal__row">
-          Coded with &hearts; by
-        </div>
-
-        <div class="personal__row personal__info">
-          Steven Wanderski <a href="http://stevenwanderski.com" target="_blank">Chicago Web Developer</a>
-        </div>
-
-        <div class="personal__row">
-          <a class="github-button" href="https://github.com/stevenwanderski/bxslider-4" data-style="mega" data-count-href="/stevenwanderski/bxslider-4/stargazers" data-count-api="/repos/stevenwanderski/bxslider-4#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star stevenwanderski/bxslider-4 on GitHub">Star</a>
-        </div>
-
-        <div class="personal__row">
-          <a href="https://twitter.com/stevenwanderski">Twitter</a>
-        </div>
-      </div>
-    </div>
-
-    <footer class="footer">
-      <div class="footer__inner">
-
-        <div class="footer__columns">
-          <div class="footer__column">
-            <div class="footer__column-row">
-              <a href="http://sliderui.com">Slider Builder</a>
-            </div>
-            <div class="footer__column-row">
-              <a href="http://css3buttongenerator.com">CSS Button Generator</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-36499930-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-
-    <!-- /7346874/Hellobar-adunits/7284 -->
-    <div id='div-gpt-ad-1573778081531-0' style='width: 1px; height: 1px;'>
-      <script>
-        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1573778081531-0'); });
-      </script>
-    </div>
+    <%= render 'layouts/personal' %>
+    <%= render 'layouts/footer' %>
+    <%= render 'layouts/analytics' %>
 
     <script>
       hljs.highlightAll();

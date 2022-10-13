@@ -1,7 +1,10 @@
 .footer {
   background: $dark-gray;
-  font-size: 14px;
-  color: $white;
+
+  a {
+    font-size: 16px;
+    color: #ccc;
+  }
 
   &__inner {
     max-width: $max-width;
