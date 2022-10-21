@@ -1,0 +1,25 @@
+<%
+html = <<-HTML
+<div class="bxslider">
+  <div><img src="#{asset_path('coffee1.jpg')}" /></div>
+  <div><img src="#{asset_path('coffee2.jpg')}" /></div>
+  <div><img src="#{asset_path('coffee3.jpg')}" /></div>
+</div>
+HTML
+
+js = <<-JS
+  $('.bxslider').bxSlider({
+    auto: true,
+    autoControls: true,
+    stopAutoOnClick: true,
+    pager: true,
+    slideWidth: 600
+  });
+JS
+%>
+
+<%= render 'pages/examples/body',
+    title: 'Auto show with start / stop controls',
+    html: html,
+    js: js
+%>

@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/examples', to: 'pages#examples'
 
   get '/examples/image-slideshow-captions', to: 'pages/examples#image_slideshow_captions'
+  get '/examples/auto-show-start-stop-controls', to: 'pages/examples#auto_show_start_stop_controls'
 end
