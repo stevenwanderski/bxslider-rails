@@ -1,0 +1,22 @@
+<%
+html = <<-HTML
+<div class="bxslider">
+  <div><img src="https://picsum.photos/600/300" /></div>
+  <div><img src="https://picsum.photos/600/400" /></div>
+  <div><img src="https://picsum.photos/600/350" /></div>
+</div>
+HTML
+
+js = <<-JS
+$('.bxslider').bxSlider({
+  adaptiveHeight: true,
+  slideWidth: 600
+});
+JS
+%>
+
+<%= render 'pages/examples/body',
+    title: 'Slidehow using adaptiveHeight',
+    html: html,
+    js: js
+%>

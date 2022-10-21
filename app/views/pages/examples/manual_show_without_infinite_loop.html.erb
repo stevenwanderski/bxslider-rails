@@ -1,0 +1,23 @@
+<%
+html = <<-HTML
+<div class="bxslider">
+  <div><img src="#{asset_path('coffee1.jpg')}" /></div>
+  <div><img src="#{asset_path('coffee2.jpg')}" /></div>
+  <div><img src="#{asset_path('coffee3.jpg')}" /></div>
+</div>
+HTML
+
+js = <<-JS
+$('.bxslider').bxSlider({
+  infiniteLoop: false,
+  hideControlOnEnd: true,
+  slideWidth: 600
+});
+JS
+%>
+
+<%= render 'pages/examples/body',
+    title: 'Manual show without infinite loop',
+    html: html,
+    js: js
+%>
