@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get '/examples/manual-show-without-infinite-loop', to: 'pages/examples#manual_show_without_infinite_loop'
   get '/examples/slideshow-adaptive-height', to: 'pages/examples#slideshow_adaptive_height'
   get '/examples/carousel-demystified', to: 'pages/examples#carousel_demystified'
+  get '/examples/carousel-static-number-slides', to: 'pages/examples#carousel_static_number_slides'
+  get '/examples/carousel-dynamic-number-slides', to: 'pages/examples#carousel_dynamic_number_slides'
 end

@@ -1,0 +1,28 @@
+<%
+html = <<-HTML
+<ul class="bxslider">
+  <li><img src="http://placehold.it/730x200&text=FooBar1" /></li>
+  <li><img src="http://placehold.it/730x200&text=FooBar2" /></li>
+  <li><img src="http://placehold.it/730x200&text=FooBar3" /></li>
+  <li><img src="http://placehold.it/730x200&text=FooBar4" /></li>
+  <li><img src="http://placehold.it/730x200&text=FooBar5" /></li>
+  <li><img src="http://placehold.it/730x200&text=FooBar6" /></li>
+</ul>
+HTML
+
+js = <<-JS
+  $('.bxslider').bxSlider({
+    minSlides: 2,
+    maxSlides: 2,
+    slideWidth: 360,
+    slideMargin: 10
+  });
+JS
+%>
+
+<%= render 'pages/examples/body',
+    title: 'Carousel - static number of slides',
+    html: html,
+    js: js,
+    text: 'This slider always displays no less than two slides (minSlides) and always displays no more than two slides (maxSlides). Therefore the carousel will always display two slides.'
+%>

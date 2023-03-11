@@ -21,6 +21,12 @@
     </div>
   </div>
 
+  <% if local_assigns[:text] %>
+    <div class="section">
+      <%= text %>
+    </div>
+  <% end %>
+
   <h2>Examples</h2>
   <%= render 'pages/examples/list' %>
 </div>
