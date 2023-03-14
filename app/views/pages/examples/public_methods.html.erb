@@ -1,0 +1,36 @@
+<%
+html = <<-HTML
+<div class="bxslider">
+  <div><img src="http://placehold.it/900x200&text=Slide 1" /></div>
+  <div><img src="http://placehold.it/900x200&text=Slide 2" /></div>
+  <div><img src="http://placehold.it/900x200&text=Slide 3" /></div>
+</div>
+
+<p><a href="" id="slider-next">Click me to go to the next slide</a><br />
+<a href="" id="slider-count">Click me to see the total slide count</a></p>
+HTML
+
+js = <<-JS
+var slider = $('.bxslider').bxSlider({
+  mode: 'fade'
+});
+
+$('#slider-next').click(function(){
+  slider.goToNextSlide();
+  return false;
+});
+
+$('#slider-count').click(function(){
+  var count = slider.getSlideCount();
+  alert('Slide count: ' + count);
+  return false;
+});
+JS
+%>
+
+<%= render 'pages/examples/body',
+    title: 'Public methods',
+    html: html,
+    js: js,
+    description: 'Note that the .bxSlider() call must be assigned to a variable (var slider in this example) to call any public methods.'
+%>

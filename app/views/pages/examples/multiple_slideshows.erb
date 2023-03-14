@@ -1,0 +1,47 @@
+<%
+html = <<-HTML
+<style>
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+</style>
+
+<h3>Slideshow 1</h3>
+<ul id="slider1">
+  <li><img src="http://placehold.it/900x200&text=Slide 1a" /></li>
+  <li><img src="http://placehold.it/900x200&text=Slide 2a" /></li>
+  <li><img src="http://placehold.it/900x200&text=Slide 3a" /></li>
+</ul>
+
+<h3>Slideshow 2</h3>
+<ul id="slider2">
+  <li><img src="http://placehold.it/900x200&text=Slide 1b" /></li>
+  <li><img src="http://placehold.it/900x200&text=Slide 2b" /></li>
+  <li><img src="http://placehold.it/900x200&text=Slide 3b" /></li>
+</ul>
+HTML
+
+js = <<-JS
+$('#slider1').bxSlider({
+  mode: 'fade',
+  auto: true,
+  autoControls: true,
+  pause: 2000
+});
+
+$('#slider2').bxSlider({
+  auto: true,
+  autoControls: true,
+  pause: 3000,
+  slideMargin: 20
+});
+JS
+%>
+
+<%= render 'pages/examples/body',
+    title: 'Multiple slideshows',
+    html: html,
+    js: js,
+    description: 'Note that parent elements do not need to have a classname of "bxslider". Simply use any jQuery selector to target the parent element, then call .bxSlider().'
+%>

@@ -16,4 +16,9 @@ Rails.application.routes.draw do
   get '/examples/thumbnail-pager-2', to: 'pages/examples#thumbnail_pager_2'
   get '/examples/vertical-slideshow', to: 'pages/examples#vertical_slideshow'
   get '/examples/custom-next-prev-selectors', to: 'pages/examples#custom_next_prev_selectors'
+  get '/examples/multiple-slideshows', to: 'pages/examples#multiple_slideshows'
+  get '/examples/callback-api', to: 'pages/examples#callback_api'
+  get '/examples/public-methods', to: 'pages/examples#public_methods'
+  get '/examples/video', to: 'pages/examples#video'
+  get '/examples/ticker', to: 'pages/examples#ticker'
 end
