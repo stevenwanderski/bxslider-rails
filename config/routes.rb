@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get '/examples/carousel-demystified', to: 'pages/examples#carousel_demystified'
   get '/examples/carousel-static-number-slides', to: 'pages/examples#carousel_static_number_slides'
   get '/examples/carousel-dynamic-number-slides', to: 'pages/examples#carousel_dynamic_number_slides'
+  get '/examples/thumbnail-pager-1', to: 'pages/examples#thumbnail_pager_1'
+  get '/examples/thumbnail-pager-2', to: 'pages/examples#thumbnail_pager_2'
 end

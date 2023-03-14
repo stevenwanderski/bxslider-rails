@@ -1,0 +1,53 @@
+<%
+html = <<-HTML
+<style type="text/css">
+  .bx-wrapper .bx-pager {
+    bottom: -95px;
+  }
+
+  .bx-wrapper .bx-pager a {
+    border: solid #ccc 1px;
+    display: block;
+    margin: 0 5px;
+    padding: 3px;
+  }
+
+  .bx-wrapper .bx-pager a:hover,
+  .bx-wrapper .bx-pager a.active {
+    border: solid #5280DD 1px;
+  }
+
+  .bx-wrapper {
+    margin-bottom: 120px;
+  }
+</style>
+
+<ul class="bxslider">
+  <li><img src="http://placehold.it/900x200&text=FooBar1" /></li>
+  <li><img src="http://placehold.it/900x200&text=FooBar2" /></li>
+  <li><img src="http://placehold.it/900x200&text=FooBar3" /></li>
+</ul>
+HTML
+
+js = <<-JS
+$('.bxslider').bxSlider({
+  buildPager: function(slideIndex){
+    switch(slideIndex){
+      case 0:
+        return '<img src="http://placehold.it/73x73&text=1">';
+      case 1:
+        return '<img src="http://placehold.it/73x73&text=2">';
+      case 2:
+        return '<img src="http://placehold.it/73x73&text=3">';
+    }
+  }
+});
+JS
+%>
+
+<%= render 'pages/examples/body',
+    title: 'Thumbnail pager - method 2',
+    html: html,
+    js: js,
+    text: 'Note that if the supplied theme is being used, some CSS must be tweaked (see the HTML code above). CSS should always be implemented in an external CSS stylesheet, not the body of your document.'
+%>

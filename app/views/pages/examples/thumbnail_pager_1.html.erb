@@ -1,0 +1,57 @@
+<%
+html = <<-HTML
+<style type="text/css">
+  #bx-pager {
+    text-align: center;
+    margin-top: -30px;
+  }
+
+  #bx-pager a {
+    margin: 0 3px;
+  }
+
+  #bx-pager a img {
+    padding: 3px;
+    border: solid #ccc 1px
+  }
+
+  #bx-pager a.active img {
+    border: solid #5280DD 1px;
+  }
+</style>
+
+<ul class="bxslider">
+  <li><img src="http://placehold.it/900x200&text=FooBar1" /></li>
+  <li><img src="http://placehold.it/900x200&text=FooBar2" /></li>
+  <li><img src="http://placehold.it/900x200&text=FooBar3" /></li>
+</ul>
+
+<div id="bx-pager">
+  <a data-slide-index="0" href=""><img src="http://placehold.it/73x73&text=1" /></a>
+  <a data-slide-index="1" href=""><img src="http://placehold.it/73x73&text=2" /></a>
+  <a data-slide-index="2" href=""><img src="http://placehold.it/73x73&text=3" /></a>
+</div>
+HTML
+
+js = <<-JS
+  $('.bxslider').bxSlider({
+    pagerCustom: '#bx-pager'
+  });
+JS
+%>
+
+<% @description = capture do %>
+  Note that the parent element (#bx-pager in this example), must contain
+  an &lt;a&gt; tag for each slide. Each &lt;a&gt; tag
+  must have a data-slide-index attribute that references the respecitve slide
+  index (zero-based). See the HTML in this example. Also note that this method should
+  not be used for dynamic carousels. See <a href="/examples/thumbnail-pager-2">here</a> for
+  a method to be used with dynamic carousels.
+<% end %>
+
+<%= render 'pages/examples/body',
+    title: 'Thumbnail pager - method 1',
+    html: html,
+    js: js,
+    text: @description
+%>
