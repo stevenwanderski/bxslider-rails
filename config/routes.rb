@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get '/examples/carousel-dynamic-number-slides', to: 'pages/examples#carousel_dynamic_number_slides'
   get '/examples/thumbnail-pager-1', to: 'pages/examples#thumbnail_pager_1'
   get '/examples/thumbnail-pager-2', to: 'pages/examples#thumbnail_pager_2'
+  get '/examples/vertical-slideshow', to: 'pages/examples#vertical_slideshow'
+  get '/examples/custom-next-prev-selectors', to: 'pages/examples#custom_next_prev_selectors'
 end

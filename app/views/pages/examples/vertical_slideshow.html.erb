@@ -1,0 +1,22 @@
+<%
+html = <<-HTML
+<div class="bxslider">
+  <div><img src="http://placehold.it/900x200&text=Slide 1" /></div>
+  <div><img src="http://placehold.it/900x200&text=Slide 2" /></div>
+  <div><img src="http://placehold.it/900x200&text=Slide 3" /></div>
+</div>
+HTML
+
+js = <<-JS
+$('.bxslider').bxSlider({
+  mode: 'vertical',
+  slideMargin: 5
+});
+JS
+%>
+
+<%= render 'pages/examples/body',
+    title: 'Vertical slideshow',
+    html: html,
+    js: js
+%>

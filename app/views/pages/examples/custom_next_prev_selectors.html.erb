@@ -1,0 +1,29 @@
+<%
+html = <<-HTML
+<ul class="bxslider">
+  <li><img src="http://placehold.it/900x200&text=Slide 1" /></li>
+  <li><img src="http://placehold.it/900x200&text=Slide 2" /></li>
+  <li><img src="http://placehold.it/900x200&text=Slide 3" /></li>
+</ul>
+
+<div class="outside">
+  <h3>This div is outside of the slider</h3>
+  <p><span id="slider-prev"></span> | <span id="slider-next"></span></p>
+</div>
+HTML
+
+js = <<-JS
+$('.bxslider').bxSlider({
+  nextSelector: '#slider-next',
+  prevSelector: '#slider-prev',
+  nextText: 'Onward →',
+  prevText: '← Go back'
+});
+JS
+%>
+
+<%= render 'pages/examples/body',
+    title: 'Vertical slideshow',
+    html: html,
+    js: js
+%>
