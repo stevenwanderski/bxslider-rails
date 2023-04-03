@@ -33,5 +33,7 @@ module BxsliderRails
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.action_view.logger = nil
   end
 end
