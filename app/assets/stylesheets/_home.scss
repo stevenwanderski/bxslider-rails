@@ -1,8 +1,10 @@
 .home {
   &__hero {
+    padding-bottom: 80px;
     margin-bottom: 80px;
     margin-top: 40px;
     text-align: center;
+    border-bottom: solid 1px #eee;
   }
 
   &__title {
@@ -45,5 +47,15 @@
     img {
       max-width: 800px;
     }
+  }
+
+  &__ctas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__cta-link {
+    font-size: 24px;
   }
 }
