@@ -21,4 +21,6 @@ Rails.application.routes.draw do
   get '/examples/public-methods', to: 'pages/examples#public_methods'
   get '/examples/video', to: 'pages/examples#video'
   get '/examples/ticker', to: 'pages/examples#ticker'
+
+  match '*unmatched', to: 'application#not_found_method', via: :all
 end
