@@ -1,10 +1,10 @@
 .home {
   &__hero {
-    padding-bottom: 80px;
+    // padding-bottom: 80px;
     margin-bottom: 80px;
     margin-top: 40px;
     text-align: center;
-    border-bottom: solid 1px #eee;
+    // border-bottom: solid 1px #eee;
   }
 
   &__title {
@@ -22,7 +22,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
+    // margin-bottom: 80px;
   }
 
   &__ad {
@@ -40,6 +40,8 @@
   }
 
   &__slider {
+    margin-bottom: 100px;
+
     .bx-wrapper {
       margin: 0 auto;
     }
