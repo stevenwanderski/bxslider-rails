@@ -1,28 +1,45 @@
 <div class="modal" style="display: none;">
   <div class="modal-body">
-    <h1>Would you mind disabling your adblocker?</h1>
+    <div class="modal-title">
+      Would you mind answering a few questions?
+    </div>
 
     <div class="modal-content">
       <div>
         <p>
-          The only way to keep bxSlider free is to show one tasteful ad per page.
-          After disabling your adblocker please refresh the page and this message will not appear again.
+          We value your experience and would love to hear your thoughts.
+          Could you spare just two minutes to fill out a quick survey?
+          Your feedback helps us make bxSlider even better!
         </p>
 
-        <p>Thank you for your support 🤗</p>
-      </div>
+        <p class="mb-3">Thank you for your support 🤗</p>
 
-      <div>
-        <div class="modal-image">
-          <%= image_tag 'adblock-disable.jpg', class: 'modal-image' %>
+        <div class="flex items-center gap-3">
+          <div>
+            <a href="https://forms.gle/imTXUgfqTxPY5NRG6" target="_blank" class="button" id="survey-button">Fill out survey</a>
+          </div>
+
+          <div>
+            <button class="modal-dismiss">No thanks.</button>
+          </div>
         </div>
       </div>
     </div>
 
-    <button class="modal-dismiss">No thanks.</button>
   </div>
 </div>
 
 <script>
+  var seenSurvey = Cookies.get('seenSurvey');
 
+  if (!seenSurvey) {
+    $('.modal').show();
+    $('body').addClass('no-scroll');
+  }
+
+  $(document).on('click', '.modal-dismiss, #survey-button', function() {
+    $('.modal').hide();
+    $('body').removeClass('no-scroll');
+    Cookies.set('seenSurvey', true);
+  })
 </script>
