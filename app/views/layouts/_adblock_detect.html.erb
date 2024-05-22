@@ -40,6 +40,6 @@
   $(document).on('click', '.modal-dismiss, #survey-button', function() {
     $('.modal').hide();
     $('body').removeClass('no-scroll');
-    Cookies.set('seenSurvey', true);
+    Cookies.set('seenSurvey', true, { expires: 365 });
   })
 </script>
