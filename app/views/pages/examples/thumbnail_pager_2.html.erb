@@ -23,9 +23,9 @@ html = <<-HTML
 </style>
 
 <ul class="bxslider">
-  <li><img src="http://placehold.it/900x200&text=FooBar1" /></li>
-  <li><img src="http://placehold.it/900x200&text=FooBar2" /></li>
-  <li><img src="http://placehold.it/900x200&text=FooBar3" /></li>
+  <li><img src="https://picsum.photos/id/22/900/200"></li>
+  <li><img src="https://picsum.photos/id/23/900/200"></li>
+  <li><img src="https://picsum.photos/id/24/900/200"></li>
 </ul>
 HTML
 
@@ -34,11 +34,11 @@ $('.bxslider').bxSlider({
   buildPager: function(slideIndex){
     switch(slideIndex){
       case 0:
-        return '<img src="http://placehold.it/73x73&text=1">';
+        return '<img src="https://picsum.photos/id/22/73/73">';
       case 1:
-        return '<img src="http://placehold.it/73x73&text=2">';
+        return '<img src="https://picsum.photos/id/23/73/73">';
       case 2:
-        return '<img src="http://placehold.it/73x73&text=3">';
+        return '<img src="https://picsum.photos/id/24/73/73">';
     }
   }
 });
