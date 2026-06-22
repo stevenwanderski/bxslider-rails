@@ -8,3 +8,6 @@ gem 'sass-rails'
 gem "puma", "~> 5.0"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem 'awesome_print'
+
+gem "dotenv-rails"
+gem "request_tracker", github: "stevenwanderski/request-tracker-gem"
